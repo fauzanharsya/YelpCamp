@@ -1,0 +1,1 @@
+const campgroundLocation = <% - JSON.stringify(campground) %>; 
