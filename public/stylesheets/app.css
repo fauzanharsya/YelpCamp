@@ -7,3 +7,22 @@
   width: 100%;
   height: 300px;
 }
+
+.image-container-indexPage{
+  width: 355.54px;
+  height: 237px;
+  overflow: hidden;
+}
+
+.image-container-showPage{
+  width: 546px;
+  height: 364px;
+  overflow: hidden;
+}
+
+.image-container-indexPage img, .image-container-showPage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

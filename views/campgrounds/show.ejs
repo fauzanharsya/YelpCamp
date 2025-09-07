@@ -5,15 +5,28 @@
 
   <div class="row">
     <div class="col-6">
-      
+
       <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <% campground.images.forEach((img, i)=> { %>
-            <div class="carousel-item <%= i === 0 ? 'active':'' %>">
-              <img crossorigin="anonymous" src="<%=img.url%>" class="d-block w-100" alt="">
+          <% if(campground.images.length===0) { %>
+            <div class="carousel-item active">
+              <div class="image-container-showPage">
+                <img crossorigin="anonymous"
+                  src="https://res.cloudinary.com/dej7fxqqa/image/upload/v1757251939/no-image-available-png-3_xqhvj5.png"
+                  class="d-block w-100" alt="">
+              </div>
             </div>
-            <% }) %>
+            <% } else { %>
+              <% campground.images.forEach((img, i)=> { %>
+                <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                  <div class="image-container-showPage">
+                    <img crossorigin="anonymous" src="<%= img.url %>" class="d-block w-100" alt="">
+                  </div>
+                </div>
+                <% }) %>
+                  <% } %>
         </div>
+
         <% if(campground.images.length> 1) { %>
           <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
