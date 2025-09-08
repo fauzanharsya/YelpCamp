@@ -8,21 +8,27 @@
   height: 300px;
 }
 
-.image-container-indexPage{
-  width: 355.54px;
-  height: 237px;
+.image-container-indexPage {
+  width: 100%;
+  aspect-ratio: 3/2;  /* maintains a consistent aspect ratio */
   overflow: hidden;
+  margin: 0 auto;  /* centers the container */
+  max-width: 400px;  /* prevents images from becoming too large */
 }
 
-.image-container-showPage{
-  width: 546px;
-  height: 364px;
+.image-container-showPage {
+  width: 100%;
+  aspect-ratio: 16/9;  /* widescreen aspect ratio */
   overflow: hidden;
+  margin: 0 auto;
+  max-height: 500px;  /* prevents excessive vertical height */
 }
 
-.image-container-indexPage img, .image-container-showPage img{
+.image-container-indexPage img,
+.image-container-showPage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;  /* centers the image content */
 }
 
